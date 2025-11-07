@@ -248,3 +248,34 @@ int main() {
   d.sound();  // "Dog barks"
 }
 ```
+
+## Function Prototype
+
+A function prototype is a declaration of a function that tells the compiler: function name, parameters (number, and types), and return type.
+
+```cpp
+int sum(int, int);  // we can add parameters names or not
+```
+
+We use it when we need to define functions after `main` function and use them inside `main`.
+
+```cpp
+int sum(int, int);
+
+int main()
+{
+  add(10, 20); // ❌❌ Compiler Error: add not defined
+  sum(10, 20); // 30
+  return 0;
+}
+
+int add(int x, int y)
+{
+  return x + y;
+}
+
+int sum(int x, int y)
+{
+  return x + y;
+}
+```
